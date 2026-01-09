@@ -11,10 +11,12 @@ const app = express ();
 
 app.use(express.json());
 app.use(cors({
-  origin: true,
+  origin: [
+    "https://contact-mangement-system-ten.vercel.app",
+  ],
+  methods: ["GET","POST","PUT","DELETE"],
   credentials: true
-}))
-
+}));
 
 app.use("/ContactSystem", userRouter);
 app.use("/ContactSystem", contactRouter);
