@@ -11,13 +11,17 @@ const app = express()
 
 app.use(express.json())
 app.use(cors({
-  origin:["https://contact-mangement-system-ten.vercel.app"],
-  methods:["GET","POST","PUT","DELETE"],
-  credentials:true
-}))
+  origin: [
+    "https://contact-mangement-system-ten.vercel.app",
+    "https://contact-mangement-system-gveo.vercel.app"
+  ],
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
+}));
 
 app.use('/ContactSystem', userRouter)
 app.use('/ContactSystem', contactRouter)
+app.use(cors())
 
 const PORT = process.env.PORT || 5000
 
