@@ -2,7 +2,8 @@ import jwt from "jsonwebtoken";
 
 import dotenv from "dotenv";
 
-dotenv.config({ path: "./config/.env" });
+dotenv.config();
+
 
 export const verifyUser = (req, res, next) => {
   const authHeader = req.headers.authorization;

@@ -1,22 +1,20 @@
 import dotenv from "dotenv";
-dotenv.config({ path: "./config/.env" });
+dotenv.config();
 
 import express from "express";
 import cors from "cors";
 import "./config/db.js";
-import { Router as userRouter } from "./routes/user.route.js";
-import { router as contactRouter } from "./routes/contact.route.js";
+import userRouter from "./routes/user.route.js";
+import contactRouter from "./routes/contact.route.js";
 
-const app = express();
+const app = express ();
 
 app.use(express.json());
 app.use(cors({
-  origin: [
-    "https://contact-mangement-system-ten.vercel.app",
-  ],
-  methods: ["GET","POST","PUT","DELETE"],
+  origin: true,
   credentials: true
-}));
+}))
+
 
 app.use("/ContactSystem", userRouter);
 app.use("/ContactSystem", contactRouter);

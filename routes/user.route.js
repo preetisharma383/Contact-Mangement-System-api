@@ -20,6 +20,7 @@ router.post('/login', [
     .withMessage("Password length should be 5-20")
 
 ], Login)
+
 router.get('/verify',verifyUser, Auth)
 
-export {router as Router}
+export default router;

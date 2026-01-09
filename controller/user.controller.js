@@ -5,7 +5,8 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 
-dotenv.config({path:"./config/.env"})
+dotenv.config();
+
 
 const Register = async (req, res) => {
   const errors = validationResult(req);

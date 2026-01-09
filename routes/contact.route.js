@@ -10,4 +10,4 @@ router.get('/contacts',verifyUser,getContacts)
 router.get('/contact/:id',verifyUser,getContactById)
 router.put('/update-contact/:id',verifyUser,updateContact)
 router.delete('/contact/:id',verifyUser,deleteContact)
-export {router}
+export default router;
