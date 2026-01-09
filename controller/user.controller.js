@@ -24,7 +24,7 @@ const Register = async (req, res) => {
       });
     }
 
-    const hashPassword = await bcrypt.hash(password, 12);
+    const hashPassword = await bcrypt.hash(password, 10);
     const newUser = new UserModel({ name, email, password: hashPassword });
     const result = await newUser.save();
 
