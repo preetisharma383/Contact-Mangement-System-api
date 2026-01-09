@@ -13,7 +13,6 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "https://contact-mangement-system-ten.vercel.app",
-    "https://contact-mangement-system-gveo.vercel.app"
   ],
   methods: ["GET","POST","PUT","DELETE"],
   credentials: true
